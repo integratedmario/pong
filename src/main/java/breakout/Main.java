@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.scene.shape.Circle;
 
@@ -16,7 +17,7 @@ import javafx.scene.shape.Circle;
 public class Main extends Application {
     // useful names for constant values used
     public static final String TITLE = "Example JavaFX Animation";
-    public static final int SIZE = 400;
+    public static final int SIZE = 1000;
 
 
     /**
@@ -24,13 +25,13 @@ public class Main extends Application {
      */
     @Override
     public void start (Stage stage) {
-        Circle shape = new Circle(190, 190, 20);
-        shape.setFill(Color.LIGHTSTEELBLUE);
+        Rectangle testPaddle = new Rectangle(460, 504, 80, 8);
+        testPaddle.setFill(Color.LIGHTSTEELBLUE);
 
         Group root = new Group();
-        root.getChildren().add(shape);
+        root.getChildren().add(testPaddle);
 
-        Scene scene = new Scene(root, SIZE, SIZE, Color.DARKBLUE);
+        Scene scene = new Scene(root, SIZE, SIZE, Color.BLACK);
         stage.setScene(scene);
 
         stage.setTitle(TITLE);
